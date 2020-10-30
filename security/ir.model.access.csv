@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_kingdoms_kingdoms,kingdoms.kingdoms,model_kingdoms_kingdoms,base.group_user,1,1,1,1
+access_kingdoms_kings,kingdoms.kings,model_kingdoms_kings,base.group_user,1,1,1,1
+access_kingdoms_dungeons,kingdoms.dungeons,model_kingdoms_dungeons,base.group_user,1,1,1,1
+access_kingdoms_killers,kingdoms.killers,model_kingdoms_killers,base.group_user,1,1,1,1
+access_kingdoms_heros,kingdoms.heros,model_kingdoms_heros,base.group_user,1,1,1,1
