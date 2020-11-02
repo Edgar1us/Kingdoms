@@ -3,7 +3,7 @@ from odoo import models, fields, api
 
 class kingdoms(models.Model):
     _name = 'kingdoms.kingdoms'
-    _description = 'REINOS'
+    _description = 'KINGDOMS'
 
     name = fields.Char()
     population = fields.Integer()
@@ -20,7 +20,7 @@ class kingdoms(models.Model):
 
 class kings(models.Model):
     _name = "kingdoms.kings"
-    _description = 'REYES'
+    _description = 'KINGS'
 
     name = fields.Char()
     race = fields.Selection([('1', 'Man'), ('2', 'Elf'), ('3', 'Dwarf'), ('4', 'Orc'), ('5', 'Dark Elf'), ('6', 'Demon')])
@@ -31,7 +31,7 @@ class kings(models.Model):
 
 class dungeons(models.Model):
     _name = "kingdoms.dungeons"
-    _description = "MAZMORRAS"
+    _description = "DUNGEONS"
 
     name = fields.Char()
     security_level = fields.Selection([('1', 'low'), ('2', 'Medium'), ('3', 'high')])
@@ -42,7 +42,7 @@ class dungeons(models.Model):
 
 class killers(models.Model):
     _name = "kingdoms.killers"
-    _description = "ASESINOS"
+    _description = "KILLERS"
 
     name = fields.Char()
     years = fields.Char()
@@ -54,7 +54,7 @@ class killers(models.Model):
 
 class heros(models.Model):
     _name = "kingdoms.heros"
-    _description = "HEROES"
+    _description = "HERO'S"
 
     name = fields.Char()
     years = fields.Char()

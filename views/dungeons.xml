@@ -52,11 +52,6 @@
 
 
 
-
-
-
-
-
         <!-- server action to the one above -->
         <!--
             <record model="ir.actions.server" id="kingdoms.action_server">
