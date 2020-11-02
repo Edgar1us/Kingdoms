@@ -1,0 +1,98 @@
+<odoo>
+    <data>
+        <!-- explicit list view definition -->
+
+
+        <record model="ir.ui.view" id="kingdoms.killers_tree">
+            <field name="name">killers list</field>
+            <field name="model">kingdoms.killers</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="years"/>
+                    <field name="weapon"/>
+                    <field name="drug"/>
+
+
+                </tree>
+            </field>
+        </record>
+
+
+        <record model="ir.ui.view" id="kingdoms.killers_form">
+            <field name="name">killers list</field>
+            <field name="model">kingdoms.killers</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="years"/>
+                            <field name="weapon"/>
+                            <field name="drug"/>
+
+
+
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+
+
+        <!-- actions opening views on models -->
+
+
+
+       <record model="ir.actions.act_window" id="kingdoms.killers_action_window">
+            <field name="name">killers window</field>
+            <field name="res_model">kingdoms.killers</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+
+
+
+
+
+
+
+        <!-- server action to the one above -->
+        <!--
+            <record model="ir.actions.server" id="kingdoms.action_server">
+              <field name="name">kingdoms server</field>
+              <field name="model_id" ref="model_kingdoms_kingdoms"/>
+              <field name="state">code</field>
+              <field name="code">
+                action = {
+                  "type": "ir.actions.act_window",
+                  "view_mode": "tree,form",
+                  "res_model": model._name,
+                }
+              </field>
+            </record>
+        -->
+
+        <!-- Top menu item -->
+
+        <menuitem name="kingdoms" id="kingdoms.menu_root"/>
+
+        <!-- menu categories -->
+
+        <menuitem name="MENU" id="kingdoms.menu_management" parent="kingdoms.menu_root"/>
+
+        <!-- actions -->
+
+
+
+       <menuitem name="killers" id="kingdoms.menu_4_killers" parent="kingdoms.menu_management"
+                  action="kingdoms.killers_action_window"/>
+
+
+
+
+    </data>
+</odoo>

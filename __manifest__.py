@@ -26,6 +26,10 @@
     'data': [
         'security/ir.model.access.csv',
         'views/views.xml',
+        'views/dungeons.xml',
+        'views/killers.xml',
+        'views/heros.xml',
+        'views/kings.xml',
         'views/templates.xml',
     ],
     # only loaded in demonstration mode

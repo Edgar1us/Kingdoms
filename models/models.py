@@ -9,6 +9,11 @@ class kingdoms(models.Model):
     population = fields.Integer()
     gold = fields.Float(default=100.0)
     photo = fields.Image(max_width=200)
+    technology = fields.Selection([('1', 'Hard'), ('2', 'Soft')])
+    contamination = fields.Integer()
+    temperature = fields.Integer()
+    level = fields.Integer()
+    material = fields.Float(default=0)
     kings = fields.Many2one('kingdoms.kings', ondelete='cascade')
     heros = fields.One2many('kingdoms.heros', 'kingdoms')
 
@@ -18,8 +23,7 @@ class kings(models.Model):
     _description = 'REYES'
 
     name = fields.Char()
-    race = fields.Selection([('1', 'Hombre'), ('2', 'Elf'), ('3', 'Enano'), ('4', 'Orc'), ('5', 'Dark Elf'), ('6',
-                                                                                                              "Devil")])
+    race = fields.Selection([('1', 'Man'), ('2', 'Elf'), ('3', 'Dwarf'), ('4', 'Orc'), ('5', 'Dark Elf'), ('6', 'Demon')])
     sex = fields.Selection([('1', 'M'), ('2', 'F')])
     level = fields.Integer()
     kingdoms = fields.One2many('kingdoms.kingdoms', 'kings')
@@ -30,6 +34,9 @@ class dungeons(models.Model):
     _description = "MAZMORRAS"
 
     name = fields.Char()
+    security_level = fields.Selection([('1', 'low'), ('2', 'Medium'), ('3', 'high')])
+
+
     killers = fields.One2many('kingdoms.killers', 'dungeons')
 
 
@@ -53,7 +60,7 @@ class heros(models.Model):
     years = fields.Char()
     level = fields.Integer()
     energy = fields.Integer()
-    weapon_type = fields.Selection([('0','Knife'),('1','Sword')])
+    weapon_type = fields.Selection([('0', 'Knife'), ('1', 'Sword')])
     luck = fields.Integer()
     kingdoms = fields.Many2one('kingdoms.kingdoms', 'heros')
 
