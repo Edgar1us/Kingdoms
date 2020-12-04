@@ -12,8 +12,9 @@
                     <field name="years"/>
                     <field name="weapon"/>
                     <field name="drug"/>
-
-
+                    <field name="weapon_type"/>
+                    <field name="dungeons"/>
+                    <field name="kings"/>
                 </tree>
             </field>
         </record>
@@ -30,6 +31,9 @@
                             <field name="years"/>
                             <field name="weapon"/>
                             <field name="drug"/>
+                            <field name="weapon_type"/>
+                            <field name="dungeons"/>
+                            <field name="kings"/>
 
 
 

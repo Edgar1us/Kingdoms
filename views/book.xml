@@ -1,0 +1,123 @@
+<odoo>
+    <data>
+
+
+        <record model="ir.ui.view" id="kingdoms.book_tree">
+            <field name="name">book list</field>
+            <field name="model">kingdoms.book</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="serial"/>
+                    <field name="registered"/>
+                    <field name="serial"/>
+                    <field name="date"/>
+                    <field name="photo"/>
+
+                    <field name="edition"/>
+                    <field name="kings"/>
+                    <field name="group"/>
+
+
+                </tree>
+            </field>
+        </record>
+
+
+        <record model="ir.ui.view" id="kingdoms.book_form">
+            <field name="name">book list</field>
+            <field name="model">kingdoms.book</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="serial"/>
+                            <field name="registered"/>
+                            <field name="serial"/>
+                            <field name="date"/>
+                            <field name="photo"/>
+                            <field name="edition"/>
+                            <field name="kings"/>
+                            <field name="group"/>
+
+
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+
+
+
+
+
+
+        <record model="ir.actions.act_window" id="kingdoms.book_action_window">
+            <field name="name">book window</field>
+            <field name="res_model">kingdoms.book</field>
+            <field name="view_mode">tree,form</field>
+             <kanban default_group_by="instrument" default_order="instrument" quick_create="true">
+                    <field name="photo" sum="photo"/>
+                    <templates>
+                    <t t-name="kanban-box">
+
+                                <div t-attf-class="oe_kanban_content">
+                                    <h4>
+                                        <a type="edit">
+                                            <field name="name"/>
+                                        </a>
+                                    </h4>
+                                    <ul>
+
+                                       <li>Group:
+                                           <field name="group"/></li>
+                                    </ul>
+                                </div>
+
+                        </t>
+                    </templates>
+                </kanban>
+        </record>
+
+
+
+
+        <!-- server action to the one above -->
+        <!--
+            <record model="ir.actions.server" id="kingdoms.action_server">
+              <field name="name">kingdoms server</field>
+              <field name="model_id" ref="model_kingdoms_kingdoms"/>
+              <field name="state">code</field>
+              <field name="code">
+                action = {
+                  "type": "ir.actions.act_window",
+                  "view_mode": "tree,form",
+                  "res_model": model._name,
+                }
+              </field>
+            </record>
+        -->
+
+        <!-- Top menu item -->
+
+        <menuitem name="kingdoms" id="kingdoms.menu_root"/>
+
+        <!-- menu categories -->
+
+        <menuitem name="MENU" id="kingdoms.menu_management" parent="kingdoms.menu_root"/>
+
+        <!-- actions -->
+
+
+
+        <menuitem name="book" id="kingdoms.menu_3_book" parent="kingdoms.menu_management"
+                  action="kingdoms.book_action_window"/>
+
+
+
+
+    </data>
+</odoo>

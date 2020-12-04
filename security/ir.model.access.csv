@@ -4,3 +4,7 @@ access_kingdoms_kings,kingdoms.kings,model_kingdoms_kings,base.group_user,1,1,1,
 access_kingdoms_dungeons,kingdoms.dungeons,model_kingdoms_dungeons,base.group_user,1,1,1,1
 access_kingdoms_killers,kingdoms.killers,model_kingdoms_killers,base.group_user,1,1,1,1
 access_kingdoms_heros,kingdoms.heros,model_kingdoms_heros,base.group_user,1,1,1,1
+access_kingdoms_points,kingdoms.points,model_kingdoms_points,base.group_user,1,1,1,1
+access_kingdoms_book,kingdoms.book,model_kingdoms_book,base.group_user,1,1,1,1
+
+
